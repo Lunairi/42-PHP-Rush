@@ -94,7 +94,7 @@ input[type="text"], input[type="password"] {
     text-align: left;
 }
 
-input[type="submit"], form a {
+input[type="submit"], form a , .returnlink{
     margin-top: 1em;
     background-color: rgba(187, 71, 71, 0.8);
     border: none;

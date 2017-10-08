@@ -5,14 +5,6 @@ session_start();
 
 	if ($_POST['login'] && $_POST['password'] && $_POST['password2'] && $_POST['submit']) 
 	{
-		if (!file_exists('./secure')) 
-		{
-			mkdir("./secure");
-		}
-		if (!file_exists('./secure/password')) 
-		{
-			file_put_contents('./secure/password', null);
-		}
 		$account = unserialize(file_get_contents('./secure/password'));
 		if ($account) 
 			foreach ($account as $key => $arg) 

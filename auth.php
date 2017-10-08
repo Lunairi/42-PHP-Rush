@@ -3,7 +3,7 @@
 	{
 		if (!$login || !$password)
 			return false;
-		$account = unserialize(file_get_contents('../secure/password'));
+		$account = unserialize(file_get_contents('./secure/password'));
 		if ($account) 
 		{
 			foreach ($account as $key => $arg) 

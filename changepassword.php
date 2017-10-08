@@ -5,48 +5,57 @@ $pwerror = 0;
 	session_start();
 	if ($_SESSION['logged_on'])
 	{
-		if ($_POST['login'] && $_POST['oldpassword'] && $_POST['newpassword'] && $_POST['newpassword2'] && $_POST['submit']) 
+		if ($_POST['oldpassword'] && $_POST['newpassword'] && $_POST['newpassword2'] && $_POST['submit']) 
 		{
 			$check = 1;
 			if ($_POST['newpassword'] != $_POST['newpassword2'])
 				$pwerror = 1;
-			$account = unserialize(file_get_contents('../secure/password'));
+			$account = unserialize(file_get_contents('./secure/password'));
 			if ($account && $pwerror != 1) 
 			{
 				foreach ($account as $key => $arg) 
 				{
-					if ($arg['login'] === $_POST['login'] && $arg['password'] === hash('whirlpool', $_POST['oldpassword'])) 
+					if ($arg['login'] === $_SESSION['logged_on'] && $arg['password'] === hash('whirlpool', $_POST['oldpassword'])) 
 						$exist = 1;
 				}
 				if ($exist) 
 				{
 					$account[$key]['password'] =  hash('whirlpool', $_POST['newpassword']);
-					file_put_contents('../secure/password', serialize($account));
-					echo "Your password has changed.\n";
+					file_put_contents('./secure/password', serialize($account));
+					// echo "Your password has changed.\n";
 				} 
 			} 
 		}
 		if (!$account)
 		{
-			echo "Account does not exist. Please create an account.\n";
+			$_SESSION['changepw'] = 1;
+			header('Location: settings.php');
+			exit;
+			// echo "Account does not exist. Please create an account.\n";
 		}
 		else if ($pwerror == 1)
 		{
-			echo "New password does not match.\n";
+			$_SESSION['changepw'] = 2;
+			header('Location: settings.php');
+			exit;
+			// echo "New password does not match.\n";
 		}
 		else if ($exist != 1)
 		{
-			echo "Password is incorrect.\n";
+			$_SESSION['changepw'] = 3;
+			header('Location: settings.php');
+			exit;
+			// echo "Password is incorrect.\n";
 		}
 		else if ($check != 1)
 		{
-			echo "You must fill out all the forms.\n";
+			$_SESSION['changepw'] = 4;
+			header('Location: settings.php');
+			exit;
+			// echo "You must fill out all the forms.\n";
 		}
 	}
-	else
-	{
-		echo "You must be logged in to perform this action.";
-	}
+
 
 ?>
 
@@ -75,7 +84,28 @@ $pwerror = 0;
 	</nav>
 
 	<div class="main-container">
-		Password changed!
+	<?php
+
+	if (!$_SESSION['logged_on'])		
+		echo "You must be logged in to perform this action.";
+	else if ($_SESSION['changepw'] == 1)
+		echo "Account does not exist. Please create an account.\n";
+	else if ($_SESSION['changepw'] == 2)
+		echo "New password does not match.\n";
+	else if ($_SESSION['changepw'] == 3)
+		echo "Password is incorrect.\n";
+	else if ($_SESSION['changepw'] == 4)
+		echo "You must fill out all the forms.\n";
+	else
+	{
+		echo '<div class="title">Your password has changed.</div>';
+		echo '<tr>
+				<td><a class="returnlink" href="./index.php">Return to Front Page</a></td>
+			</tr>';
+
+	}
+	$_SESSION['changepw'] = "";
+	?>
 	</div>
 
 </body>
