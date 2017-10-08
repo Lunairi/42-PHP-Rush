@@ -8,6 +8,13 @@ body {
 
 /* Nav Bar */
 
+.userlog {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
 nav {
     top: 0;
     left: 0;

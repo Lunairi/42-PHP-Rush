@@ -44,15 +44,26 @@
 
 	if ($_SESSION['logged_on'] === "admin")
 	{
-		echo "User List";
+		echo "Deletion Log";
 		echo '<br><br>';
-		$account = unserialize(file_get_contents('./secure/password'));
-		if ($account) 
-			foreach ($account as $key => $arg) 
-			{
-				echo "User: " . $account[$key]['login'] . ".";
-				echo '<br>';
-			}
+		$delete = unserialize(file_get_contents('./secure/deletelog'));
+		foreach ($delete as $key => $arg) 
+		{
+			echo "User: " . $delete[$key]['login'] . "\n\n-\n\nReason: " . $delete[$key]['reason'] . "";
+			echo '<br>';
+		}
+		echo '<br><td><a href="./settings.php">Back to Settings</a></td>';
+		echo '</form>';
+		echo '<form class="main-container" action="#" method="POST">';
+		echo "Creation Log";
+		echo '<br><br>';
+		$create = unserialize(file_get_contents('./secure/createlog'));
+		foreach ($create as $key2 => $arg2) 
+		{
+			echo "User: " . $create[$key2]['login'] . "\n\n-\n\nCreated by: admin";
+			echo '<br>';
+		}
+
 		echo '<br><td><a href="./settings.php">Back to Settings</a></td>';
 	}
 	else

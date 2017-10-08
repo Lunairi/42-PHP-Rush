@@ -5,6 +5,14 @@
 		mkdir("./secure");
 	if (!file_exists('./secure/password')) 
 		file_put_contents('./secure/password', null);
+	if (!file_exists('./secure/deletelog')) 
+		file_put_contents('./secure/deletelog', null);
+	if (!file_exists('./secure/createlog')) 
+		file_put_contents('./secure/createlog', null);
+	if (!file_exists('./secure/checkout')) 
+		file_put_contents('./secure/checkout', null);
+	if (!file_exists('./secure/basket')) 
+		file_put_contents('./secure/basket', null);
 
 ?>
 
@@ -16,17 +24,32 @@
     <link rel="stylesheet" type="text/css" href="./styles/index.css">
 </head>
 <body>
-    <nav>
-        Dirt... just dirt.
-        <ul><a href="./index.php">Dirt<img src="./src/logo.png" /></a>
-            <div class="dropdown-content">
-                <a href="./login.php"><li>Login</li></a>
-                <a href="./settings.php"><li>Settings</li></a>
-                <a href="./basket.php"><li>Basket</li></a>
-                <a href="./checkout.php"><li>Checkout</li></a>
-            </div>
-        </ul>
-    </nav>
+
+	<nav>
+		<a href="./index.php">Dirt... just dirt.</a>
+		<?php
+			if ($_SESSION['logged_on'])
+			{
+				echo '<p class="userlog">';
+				echo $_SESSION['logged_on'];
+				echo '</p>';
+			}
+		?>
+		<ul><a href="./index.php">Dirt<img src="./src/logo.png" /></a>
+			<div class="dropdown-content">
+			<?php
+				if (!$_SESSION['logged_on'])
+					echo'<a href="./login.php"><li>Login</li></a>';
+				else
+					echo'<a href="./logout.php"><li>Logout</li></a>';
+			?>
+				<a href="./settings.php"><li>Settings</li></a>
+				<a href="./basket.php"><li>Basket</li></a>
+				<a href="./checkout.php"><li>Checkout</li></a>
+			</div>
+		</ul>
+	</nav>
+	
     <form class="main-container catalog" action="additem.php" method="POST">
         <div class="title">Our finest selection of dirt:</div>
         <div class="item-container">
