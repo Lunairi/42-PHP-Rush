@@ -5,19 +5,16 @@
     position: relative;
     width: 70vmax;
 }
-
 .title {
     font-size: 1.8em;
     margin: 0.3em;
 }
-
 .item-container {
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start;
     justify-content: center;
 }
-
 .item {
     flex: 0 0 auto;
     height: 10em;
@@ -26,31 +23,29 @@
     margin: 0.5em;
     background-color: rgba(154, 51, 0, 0.87);
 }
-
 .item img {
-    height: 50%;
+    height: 60%;
     width: 95%;
     border: 1px solid black;
     margin: 0.2em auto;
 }
-
 .deets {
-    /*background-color: rgba(0, 255, 0, 0.5);*/
-    /*height: 100%;*/
-    /*margin: auto;*/
-    /*padding: 0.7em;*/
-}
-
-.dirt-name {
     font-size: 0.8em;
 }
-
+.dirt-name {
+    display: inline-block;
+}
+.price {
+    margin-right: 0.4em;
+    font-size: 0.75em;
+    display: inline-block;
+    float: right;
+}
 .deets input {
     margin: 0.8em;
     width: 80%;
     text-align: right;
 }
-
 input[type="submit"] {
     margin: 1em auto;
     font-size: 1em;
