@@ -32,20 +32,94 @@
 		</ul>
 	</nav>
 
-	<div class="main-container catalog">
-		<div class="item">Mikim</div>
-		<div class="item">Mikim</div>
-		<div class="item">Mikim</div>
-		<div class="item">Mikim</div>
-		<div class="item">Mikim</div>
-		<div class="item">Mikim</div>
-		<div class="item">Mikim</div>
-		<div class="item">Mikim</div>
-		<div class="item">Mikim</div>
-		<div class="item">Mikim</div>
-		<div class="item">Mikim</div>
-		<div class="item">Mikim</div>
-	</div>
+	<form class="main-container catalog" action="additem.php" method="POST">
+
+		<div class="title">Our finest selection of dirt:</div>
+
+		<div class="item-container">
+
+			<div class="item">
+				<img src="./src/soil1.jpg" />
+				<div class="deets">
+					<div class="dirt-name">Magic</div>
+					<input type="number" name="soil1" value="0" />
+				</div>
+			</div>
+
+			<div class="item">
+				<img src="./src/soil2.jpg" />
+				<div class="deets">
+					<div class="dirt-name">Serenity</div>
+					<input type="number" name="soil2" value="0" />
+				</div>
+			</div>
+
+			<div class="item">
+				<img src="./src/soil3.jpg" />
+				<div class="deets">
+					<div class="dirt-name">Tranquility</div>
+					<input type="number" name="soil3" value="0" />
+				</div>
+			</div>
+
+			<div class="item">
+				<img src="./src/soil4.jpg" />
+				<div class="deets">
+					<div class="dirt-name">Transformation</div>
+					<input type="number" name="soil4" value="0" />
+				</div>
+			</div>
+
+			<div class="item">
+				<img src="./src/soil5.jpg" />
+				<div class="deets">
+					<div class="dirt-name">Freedom</div>
+					<input type="number" name="soil5" value="0" />
+				</div>
+			</div>
+
+			<div class="item">
+				<img src="./src/soil6.jpg" />
+				<div class="deets">
+					<div class="dirt-name">Determination</div>
+					<input type="number" name="soil6" value="0" />
+				</div>
+			</div>
+
+			<div class="item">
+				<img src="./src/soil7.jpg" />
+				<div class="deets">
+					<div class="dirt-name">Might</div>
+					<input type="number" name="soil7" value="0" />
+				</div>
+			</div>
+
+			<div class="item">
+				<img src="./src/soil8.jpg" />
+				<div class="deets">
+					<div class="dirt-name">Guilt</div>
+					<input type="number" name="soil8" value="0" />
+				</div>
+			</div>
+
+			<div class="item">
+				<img src="./src/soil9.jpg" />
+				<div class="deets">
+					<div class="dirt-name">Purity</div>
+					<input type="number" name="soil9" value="0" />
+				</div>
+			</div>
+
+		</div>
+	<?PHP
+
+		if ($_SESSION['logged_on'])
+			echo '<input type="submit" name="amount" value="Add to cart"/>';
+		else
+			echo '<a href="./login.php">Login to begin shopping</a>';
+	?>
+
+	</form>
 
 </body>
 

@@ -59,9 +59,13 @@ li {
 }
 
 ul:hover .dropdown-content {
-    /*mix-blend-mode: hard-light; */
     mix-blend-mode: difference;
     display: block;
+}
+
+.dropdown-content a:hover {
+    mix-blend-mode: difference;
+    background-color: red;    
 }
 
 /* Container */
@@ -76,6 +80,7 @@ ul:hover .dropdown-content {
 
 .title {
     margin-bottom: 1em;
+    font-size: 1.3em;
 
 }
 
@@ -88,13 +93,13 @@ form {
     display: inline-block;
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], input[type="number"] {
     font-size: 0.5em;
     height: 2em;
     text-align: left;
 }
 
-input[type="submit"], form a , .returnlink{
+input[type="submit"], form a, .returnlink {
     margin-top: 1em;
     background-color: rgba(187, 71, 71, 0.8);
     border: none;

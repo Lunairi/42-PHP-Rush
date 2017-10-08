@@ -1,17 +1,58 @@
 .catalog {
     margin: auto;
-    display: flex;
-    flex-flow: row wrap;
+    margin-bottom: 2em;
+    padding-top: 0.5em;
     position: relative;
     width: 70vmax;
-    height: 80vmax;
-    /*background-color: green;*/
+}
+
+.title {
+    font-size: 1.8em;
+    margin: 0.3em;
+}
+
+.item-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .item {
-    flex: 1 1 auto;
-    width: 5vmax;
-    height: 5vmax;
-    margin: 4px;
-    background-color: red;
+    flex: 0 0 auto;
+    height: 10em;
+    width: 5em;
+    min-width: 27%;
+    margin: 0.5em;
+    background-color: rgba(154, 51, 0, 0.87);
+}
+
+.item img {
+    height: 50%;
+    width: 95%;
+    border: 1px solid black;
+    margin: 0.2em auto;
+}
+
+.deets {
+    /*background-color: rgba(0, 255, 0, 0.5);*/
+    /*height: 100%;*/
+    /*margin: auto;*/
+    /*padding: 0.7em;*/
+}
+
+.dirt-name {
+    font-size: 0.8em;
+}
+
+.deets input {
+    margin: 0.8em;
+    width: 80%;
+    text-align: right;
+}
+
+input[type="submit"] {
+    margin: 1em auto;
+    font-size: 1em;
+    text-align: center;
 }
