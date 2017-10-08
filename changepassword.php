@@ -1,7 +1,5 @@
 <?php
-$exist = 0;
-$check = 0;
-$pwerror = 0;
+
 	session_start();
 	if ($_SESSION['logged_on'])
 	{
@@ -22,7 +20,6 @@ $pwerror = 0;
 				{
 					$account[$key]['password'] =  hash('whirlpool', $_POST['newpassword']);
 					file_put_contents('./secure/password', serialize($account));
-					// echo "Your password has changed.\n";
 				} 
 			} 
 		}
@@ -31,31 +28,26 @@ $pwerror = 0;
 			$_SESSION['changepw'] = 1;
 			header('Location: settings.php');
 			exit;
-			// echo "Account does not exist. Please create an account.\n";
 		}
 		else if ($pwerror == 1)
 		{
 			$_SESSION['changepw'] = 2;
 			header('Location: settings.php');
 			exit;
-			// echo "New password does not match.\n";
 		}
 		else if ($exist != 1)
 		{
 			$_SESSION['changepw'] = 3;
 			header('Location: settings.php');
 			exit;
-			// echo "Password is incorrect.\n";
 		}
 		else if ($check != 1)
 		{
 			$_SESSION['changepw'] = 4;
 			header('Location: settings.php');
 			exit;
-			// echo "You must fill out all the forms.\n";
 		}
 	}
-
 
 ?>
 
@@ -105,6 +97,7 @@ $pwerror = 0;
 
 	}
 	$_SESSION['changepw'] = "";
+
 	?>
 	</div>
 

@@ -1,10 +1,10 @@
 <?php
 
-session_start();
-if (!file_exists('./secure')) 
-	mkdir("./secure");
-if (!file_exists('./secure/password')) 
-	file_put_contents('./secure/password', null);
+	session_start();
+	if (!file_exists('./secure')) 
+		mkdir("./secure");
+	if (!file_exists('./secure/password')) 
+		file_put_contents('./secure/password', null);
 
 ?>
 

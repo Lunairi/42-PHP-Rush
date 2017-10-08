@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+	session_start();
 	$invalid = 0;
 
 	if ($_POST['login'] && $_POST['password'] && $_POST['password2'] && $_POST['submit']) 
@@ -29,6 +29,7 @@ session_start();
 	} 
 	else 
 		$_SESSION['creation'] = 4;
-header('Location: newaccount.php');
-exit;
+	header('Location: newaccount.php');
+	exit;
+	
 ?>

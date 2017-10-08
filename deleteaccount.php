@@ -1,5 +1,5 @@
 <?php
-$invalid = 0;
+
 	session_start();
 	if ($_SESSION['logged_on'])
 	{
@@ -22,26 +22,16 @@ $invalid = 0;
 		{
 			$_SESSION['delete'] = 1;
 			$_SESSION['logged_on'] = "";
-			// echo "Account deleted.\n";
 		}
 		else if ($_POST['password'] != $_POST['password2'])
-		{
 			$_SESSION['delete'] = 3;
-			// echo "Passwords must match.\n";
-		}
 		else if ($exist != 1)
-		{
 			$_SESSION['delete'] = 4;
-			// echo "The password is incorrect.\n";
-		}
 		else 
-		{
 			$_SESSION['delete'] = 5;
-			// echo "You must fill out all the forms.\n";
-		}
 	}
-header('Location: settings.php');
-exit;
+	header('Location: settings.php');
+	exit;
 
 ?>
 

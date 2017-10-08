@@ -1,4 +1,5 @@
 <?php
+
 	function auth($login, $password) 
 	{
 		if (!$login || !$password)
@@ -12,4 +13,5 @@
 		}
 		return false;
 	}
+	
 ?>
