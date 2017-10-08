@@ -1,21 +1,5 @@
 <?php
-
 	session_start();
-	if (!file_exists('./secure')) 
-		mkdir("./secure");
-	if (!file_exists('./secure/password')) 
-		file_put_contents('./secure/password', null);
-	if (!file_exists('./secure/deletelog')) 
-		file_put_contents('./secure/deletelog', null);
-	if (!file_exists('./secure/createlog')) 
-		file_put_contents('./secure/createlog', null);
-	if (!file_exists('./secure/checkout')) 
-		file_put_contents('./secure/checkout', null);
-	if (!file_exists('./secure/basket')) 
-		file_put_contents('./secure/basket', null);
-	if (!file_exists('./secure/data')) 
-		file_put_contents('./secure/data', null);
-
 ?>
 
 <!DOCTYPE HTML>
@@ -53,12 +37,12 @@
 	</nav>
 
     <form class="main-container catalog" action="additem.php" method="POST">
-        <div class="title">Our finest selection of dirt:</div>
+        <div class="title">Our dryest selection of dirt:</div>
         <div class="item-container">
 
         <?php
         $data = unserialize(file_get_contents('./secure/data'));
-        if ($data['soil1a'] == 1)
+        if ($data['soil1t'] == 2 && $data['soil1a'] == 1)
         {
            echo '<div class="item">
                 <img src="./src/soil1.jpg" />
@@ -69,7 +53,7 @@
                 </div>
             </div>';
         }
-        if ($data['soil2a'] == 1)
+        if ($data['soil2t'] == 2 && $data['soil2a'] == 1)
         {
             echo '<div class="item">
                 <img src="./src/soil2.jpg" />
@@ -80,7 +64,7 @@
                 </div>
             </div>';
         }
-        if ($data['soil3a'] == 1)
+        if ($data['soil3t'] == 2 && $data['soil3a'] == 1)
         {
             echo '<div class="item">
                 <img src="./src/soil3.jpg" />
@@ -91,7 +75,7 @@
                 </div>
             </div>';
         }
-        if ($data['soil4a'] == 1)
+        if ($data['soil4t'] == 2 && $data['soil4a'] == 1)
         {
             echo '<div class="item">
                 <img src="./src/soil4.jpg" />
@@ -102,7 +86,7 @@
                 </div>
             </div>';
         }
-        if ($data['soil5a'] == 1)
+        if ($data['soil5t'] == 2 && $data['soil5a'] == 1)
         {
             echo '<div class="item">
                 <img src="./src/soil5.jpg" />
@@ -113,7 +97,7 @@
                 </div>
             </div>';
         }
-        if ($data['soil6a'] == 1)
+        if ($data['soil6t'] == 2 && $data['soil6a'] == 1)
         {
            echo '<div class="item">
                 <img src="./src/soil6.jpg" />
@@ -124,7 +108,7 @@
                 </div>
             </div>';
         }
-        if ($data['soil7a'] == 1)
+        if ($data['soil7t'] == 2 && $data['soil7a'] == 1)
         {
             echo '<div class="item">
                 <img src="./src/soil7.jpg" />
@@ -135,7 +119,7 @@
                 </div>
             </div>';
         }
-        if ($data['soil8a'] == 1)
+        if ($data['soil8t'] == 2 && $data['soil8a'] == 1)
         {
             echo '<div class="item">
                 <img src="./src/soil8.jpg" />
@@ -146,7 +130,7 @@
                 </div>
             </div>';
         }
-        if ($data['soil9a'] == 1)
+        if ($data['soil9t'] == 2 && $data['soil9a'] == 1)
         {
             echo '<div class="item">
                 <img src="./src/soil9.jpg" />
@@ -167,4 +151,3 @@
     </form>
 </body>
 </html>
-

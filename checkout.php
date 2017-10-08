@@ -81,6 +81,6 @@
 		else
 			$_SESSION['buy'] = 2;
 	}
-	header('Location: basket.php');
+	header('Location: receipt.php');
 	exit;
 ?>
