@@ -1,0 +1,17 @@
+.catalog {
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    width: 70vmax;
+    height: 80vmax;
+    /*background-color: green;*/
+}
+
+.item {
+    flex: 1 1 auto;
+    width: 5vmax;
+    height: 5vmax;
+    margin: 4px;
+    background-color: red;
+}
