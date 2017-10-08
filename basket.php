@@ -32,6 +32,16 @@
 
 	<?php
 
+	if ($_SESSION['add'] == 1)
+	{
+		echo '<div>Product has been added to cart.</div><br>';
+		$_SESSION['add'] = "";
+	}
+	else if ($_SESSION['add'] == 2)
+	{
+		echo '<div>No product has been added.</div><br>';
+		$_SESSION['add'] = "";
+	}
 	if (!$_SESSION['logged_on'])
 		echo "You must be logged in to view this.";
 	else
