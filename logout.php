@@ -17,7 +17,7 @@
 
 	<form class="main-container" action="quit.php" method="POST">
 
-<?
+<?php
 	if ($_SESSION['quit'])
 	{
 		echo "You've logged out.";
@@ -29,9 +29,8 @@
 	}
 	else
 	{
-		echo "Log out?";
+		echo 'Log out?';
 		echo '<table>
-
 			<tr>
 				<td><input type="submit" name="submit" value="Log Out"/></td>
 				<td><a href="./index.php">Return to Front Page</a></td>

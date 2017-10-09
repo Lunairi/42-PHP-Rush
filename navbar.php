@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <nav>
 	<a href="./index.php">Dirt... just dirt.</a>
 	<?php

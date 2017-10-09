@@ -1,17 +1,5 @@
 <?php
     session_start();
-    if (!file_exists('./secure')) 
-        mkdir("./secure");
-    if (!file_exists('./secure/password')) 
-        file_put_contents('./secure/password', null);
-    if (!file_exists('./secure/deletelog')) 
-        file_put_contents('./secure/deletelog', null);
-    if (!file_exists('./secure/createlog')) 
-        file_put_contents('./secure/createlog', null);
-    if (!file_exists('./secure/checkout')) 
-        file_put_contents('./secure/checkout', null);
-    if (!file_exists('./secure/basket')) 
-        file_put_contents('./secure/basket', null);
 
     $data = unserialize(file_get_contents('./secure/data'));
     $origin = $_SESSION['origin'] = $_POST['filter-origin'];
@@ -36,19 +24,19 @@
         <form class="filter" method="post" action="" name="filter">
 
             <select name="filter-origin" value="">
-                <option value="0" <? if ($origin == 0) echo "selected" ?> >All continents</option>
-                <option value="1" <? if ($origin == 1) echo "selected" ?> >America</option>
-                <option value="2" <? if ($origin == 2) echo "selected" ?> >Asia</option>
-                <option value="3" <? if ($origin == 3) echo "selected" ?> >Africa</option>
-                <option value="4" <? if ($origin == 4) echo "selected" ?> >Europe</option>
+                <option value="0" <?php if ($origin == 0) echo "selected" ?> >All continents</option>
+                <option value="1" <?php if ($origin == 1) echo "selected" ?> >America</option>
+                <option value="2" <?php if ($origin == 2) echo "selected" ?> >Asia</option>
+                <option value="3" <?php if ($origin == 3) echo "selected" ?> >Africa</option>
+                <option value="4" <?php if ($origin == 4) echo "selected" ?> >Europe</option>
             </select>
 
             <select name="filter-texture" value="">
-                <option value="0" <? if ($texture == 0) echo "selected" ?> >All textures</option>
-                <option value="1" <? if ($texture == 1) echo "selected" ?> >Wet</option>
-                <option value="2" <? if ($texture == 2) echo "selected" ?> >Dry</option>
-                <option value="3" <? if ($texture == 3) echo "selected" ?> >Coarse</option>
-                <option value="4" <? if ($texture == 4) echo "selected" ?> >Fine</option>
+                <option value="0" <?php if ($texture == 0) echo "selected" ?> >All textures</option>
+                <option value="1" <?php if ($texture == 1) echo "selected" ?> >Wet</option>
+                <option value="2" <?php if ($texture == 2) echo "selected" ?> >Dry</option>
+                <option value="3" <?php if ($texture == 3) echo "selected" ?> >Coarse</option>
+                <option value="4" <?php if ($texture == 4) echo "selected" ?> >Fine</option>
             </select>
 
             <input type="submit" name="filter-submit" value="Filter" />

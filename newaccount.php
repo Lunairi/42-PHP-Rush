@@ -17,7 +17,7 @@
 
 	<form class="main-container" action="createaccount.php" method="POST">
 
-<?
+<?php
 	if ($_SESSION['creation'])
 	{
 		if ($_SESSION['creation'] === 1)

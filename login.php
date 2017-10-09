@@ -18,7 +18,7 @@
 
 	<form class="main-container" action="access.php" method="POST">
 
-<?
+<?php
 	if ($_SESSION['logged_on'] && !$_SESSION['access'])
 	{
 		echo "You're already logged in. Log out?";
