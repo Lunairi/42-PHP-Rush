@@ -1,11 +1,13 @@
 .catalog {
-    width: 80vmax;
+	width: 80vmax;
 }
+
 td input {
-    width: 100%;
-    text-align: right;
+	width: 100%;
+	text-align: right;
 }
+
 select {
-    width: 80%;
-    margin: 1em;
+	width: 80%;
+	margin: 1em;
 }

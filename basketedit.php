@@ -9,17 +9,7 @@
     <link rel="stylesheet" type="text/css" href="./styles/basket.css">
 </head>
 <body>
-    <nav>
-        Dirt... just dirt.
-        <ul><a href="./index.php">Dirt<img src="./src/logo.png" /></a>
-            <div class="dropdown-content">
-                <a href="./login.php"><li>Login</li></a>
-                <a href="./settings.php"><li>Settings</li></a>
-                <a href="./basket.php"><li>Basket</li></a>
-                <a href="./checkout.php"><li>Checkout</li></a>
-            </div>
-        </ul>
-    </nav>
+<?php require('./navbar.php') ?>
     <form class="main-container catalog" action="changebasket.php">
         <div class="title">Edit Basket</div>
         <table>

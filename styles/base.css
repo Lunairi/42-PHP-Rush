@@ -8,12 +8,6 @@ body {
 
 /* Nav Bar */
 
-.userlog {
-    display: block;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-}
 
 nav {
     top: 0;
@@ -75,13 +69,20 @@ ul:hover .dropdown-content {
     background-color: red;    
 }
 
+.userlog {
+    margin: 0;
+    font-size: 0.5em;
+    vertical-align: top;
+    display: inline-block;
+    float: right;
+}
+
 /* Container */
 
 .main-container {
     margin: 3vmax auto;
     padding: 1.2em;
     background-color: rgba(255, 255, 255, 0.5);
-    /*width: 30vmax;*/
     font-size: 2em;
 }
 
@@ -100,7 +101,7 @@ form {
     display: inline-block;
 }
 
-input[type="text"], input[type="password"], input[type="number"] {
+input[type="text"], input[type="password"], input[type="number"], input[list], select {
     font-size: 0.5em;
     height: 2em;
     text-align: left;
