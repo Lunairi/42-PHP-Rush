@@ -73,7 +73,7 @@
 			}
 			$totalprice = $checkout[$key]['price1'] + $checkout[$key]['price2'] + $checkout[$key]['price3'] + $checkout[$key]['price4'] + $checkout[$key]['price5'] + $checkout[$key]['price6'] + $checkout[$key]['price7'] + $checkout[$key]['price8'] + $checkout[$key]['price9'];
 			$final += $totalprice;
-			echo 'Final Sale: $' . $totalprice . '.<br><br>';
+			echo '<br>Final Sale: $' . $totalprice . '.<br><hr><br>';
 		}
 		echo '<br>Total Sale Profit: $' . $final . '.<br>';
 		echo '<br><td><a href="./settings.php">Back to Settings</a></td>';

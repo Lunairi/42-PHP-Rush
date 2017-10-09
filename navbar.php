@@ -14,7 +14,7 @@
 		?>
 			<a href="./settings.php"><li>Settings</li></a>
 			<a href="./basket.php"><li>Basket</li></a>
-			<a href="./checkout.php"><li>Checkout</li></a>
+			<a href="./history.php"><li>History</li></a>
 		</div>
 	</ul>
 </nav>

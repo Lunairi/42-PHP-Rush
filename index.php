@@ -65,8 +65,8 @@
                        echo '<div class="item">
                             <img src="./src/soil1.jpg" />
                             <div class="deets">
-                                <div class="dirt-name">Magic</div>
-                                <div class="price">$10/kg</div>
+                                <div class="dirt-name">' . $data['soil1'] . '</div>
+                                <div class="price">$' . $data['soil1p'] . '/kg</div>
                                 <input type="number" name="soil1" min="0" value="0" />
                             </div>
                         </div>';
@@ -76,8 +76,8 @@
                         echo '<div class="item">
                             <img src="./src/soil2.jpg" />
                             <div class="deets">
-                                <div class="dirt-name">Serenity</div>
-                                <div class="price">$20/kg</div>
+                                <div class="dirt-name">' . $data['soil2'] . '</div>
+                                <div class="price">$' . $data['soil2p'] . '/kg</div>
                                 <input type="number" name="soil2" min="0" value="0" />
                             </div>
                         </div>';
@@ -87,8 +87,8 @@
                         echo '<div class="item">
                             <img src="./src/soil3.jpg" />
                             <div class="deets">
-                                <div class="dirt-name">Tranquility</div>
-                                <div class="price">$60/kg</div>
+                               <div class="dirt-name">' . $data['soil3'] . '</div>
+                                <div class="price">$' . $data['soil3p'] . '/kg</div>
                                 <input type="number" name="soil3" min="0" value="0" />
                             </div>
                         </div>';
@@ -98,8 +98,8 @@
                         echo '<div class="item">
                             <img src="./src/soil4.jpg" />
                             <div class="deets">
-                                <div class="dirt-name">Transformation</div>
-                                <div class="price">$32/kg</div>
+                                <div class="dirt-name">' . $data['soil4'] . '</div>
+                                <div class="price">$' . $data['soil4p'] . '/kg</div>
                                 <input type="number" name="soil4" min="0" value="0" />
                             </div>
                         </div>';
@@ -109,8 +109,8 @@
                         echo '<div class="item">
                             <img src="./src/soil5.jpg" />
                             <div class="deets">
-                                <div class="dirt-name">Freedom</div>
-                                <div class="price">$40/kg</div>
+                                <div class="dirt-name">' . $data['soil5'] . '</div>
+                                <div class="price">$' . $data['soil5p'] . '/kg</div>
                                 <input type="number" name="soil5" min="0" value="0" />
                             </div>
                         </div>';
@@ -120,8 +120,8 @@
                        echo '<div class="item">
                             <img src="./src/soil6.jpg" />
                             <div class="deets">
-                                <div class="dirt-name">Determination</div>
-                                <div class="price">$70/kg</div>
+                                <div class="dirt-name">' . $data['soil6'] . '</div>
+                                <div class="price">$' . $data['soil6p'] . '/kg</div>
                                 <input type="number" name="soil6" min="0" value="0" />
                             </div>
                         </div>';
@@ -131,8 +131,8 @@
                         echo '<div class="item">
                             <img src="./src/soil7.jpg" />
                             <div class="deets">
-                                <div class="dirt-name">Might</div>
-                                <div class="price">$20/kg</div>
+                                <div class="dirt-name">' . $data['soil7'] . '</div>
+                                <div class="price">$' . $data['soil7p'] . '/kg</div>
                                 <input type="number" name="soil7" min="0" value="0" />
                             </div>
                         </div>';
@@ -142,8 +142,8 @@
                         echo '<div class="item">
                             <img src="./src/soil8.jpg" />
                             <div class="deets">
-                                <div class="dirt-name">Guilt</div>
-                                <div class="price">$69/kg</div>
+                               <div class="dirt-name">' . $data['soil8'] . '</div>
+                                <div class="price">$' . $data['soil8p'] . '/kg</div>
                                 <input type="number" name="soil8" min="0" value="0" />
                             </div>
                         </div>';
@@ -153,8 +153,8 @@
                         echo '<div class="item">
                             <img src="./src/soil9.jpg" />
                             <div class="deets">
-                                <div class="dirt-name">Purity</div>
-                                <div class="price">$42/kg</div>
+                               <div class="dirt-name">' . $data['soil9'] . '</div>
+                                <div class="price">$' . $data['soil9p'] . '/kg</div>
                                 <input type="number" name="soil9" min="0" value="0" />
                             </div>
                         </div>';
