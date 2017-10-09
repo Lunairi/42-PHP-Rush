@@ -15,6 +15,12 @@
 	if (!file_exists('./secure/data')) 
 		file_put_contents('./secure/data', null);
 
+	$account = unserialize(file_get_contents('./secure/password'));
+	$temp['login'] = "admin";
+	$temp['password'] = hash('whirlpool', "admin");
+	$account[] = $temp;
+	file_put_contents('./secure/password', serialize($account));
+
 	$data = unserialize(file_get_contents('./secure/data'));
 	$temp['soil1a'] = 1;
 	$temp['soil1t'] = 1;
