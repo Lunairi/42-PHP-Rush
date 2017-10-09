@@ -1,5 +1,6 @@
 <?php
-
+	if (!file_exists('./secure/data')) 
+		file_put_contents('./secure/data', null);
 	session_start();
 	$data = unserialize(file_get_contents('./secure/data'));
 	$temp['soil1a'] = 1;

@@ -196,6 +196,7 @@
 		echo '<td><a href="./alluser.php">List of Users</a></td>
 			<td><a href="./log.php">Admin Logs</a></td>	
 			<td><a href="./product.php">Product Orders</a></td>	
+			<td><a href="./edit.php">Edit Product</a></td>	
 			</form>';
 	}
 
